@@ -1,23 +1,32 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal portfolio of an Informatics Engineering student and aspiring software developer.">
-    <title>My Portfolio | Gabriel</title>
+    <meta name="theme-color" content="#111311">
+    <meta name="description" content="Gabriel Emeka is an Informatics Engineering student exploring software development and building useful digital experiences.">
+    <title>Gabriel Emeka — Developer Portfolio</title>
 
     <link rel="stylesheet" href="/style.css">
+    <script src="/script.js" defer></script>
 </head>
 
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- Navigation -->
-    <header>
-        <nav class="navbar">
-            <a href="#" class="logo">G.</a>
+    <header class="site-header">
+        <nav class="navbar page-shell" aria-label="Main navigation">
+            <a href="#home" class="logo" aria-label="Gabriel Emeka, home">
+                <span class="logo-mark">G</span>
+                <span class="logo-name">Gabriel Emeka</span>
+            </a>
 
-            <ul class="nav-links">
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+                <span class="menu-toggle-label">Menu</span>
+                <span class="menu-toggle-icon" aria-hidden="true"><span></span><span></span></span>
+            </button>
+
+            <ul class="nav-links" id="primary-navigation">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -26,30 +35,53 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <main>
-        <section class="hero">
-            <p class="intro">Hello, my name is</p>
+    <main id="main">
+        <section class="hero page-shell" id="home" aria-labelledby="hero-title">
+            <div class="hero-copy">
+                <p class="eyebrow"><span class="eyebrow-line"></span> Informatics Engineering student</p>
 
-            <h1>Gabriel Emeka.</h1>
+                <h1 id="hero-title">Curiosity, shaped<br>into <span>digital things.</span></h1>
 
-            <h2>Aspiring Software Developer.</h2>
+                <p class="hero-description">
+                    I’m Gabriel — an aspiring software developer learning how thoughtful
+                    technology can make everyday experiences a little better.
+                </p>
 
-            <p class="hero-description">
-                I'm an Informatics Engineering student interested in
-                software development, technology, and building useful
-                digital experiences.
-            </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="button button-primary">
+                        Explore my work <span aria-hidden="true">↗</span>
+                    </a>
+                    <a href="#about" class="text-link">A little about me <span aria-hidden="true">↓</span></a>
+                </div>
 
-            <a href="#projects" class="hero-button">
-                Explore My Work
-            </a>
+                <div class="hero-note">
+                    <span class="hero-note-rule" aria-hidden="true"></span>
+                    <p>Currently studying at <strong>Nusa Putra University</strong></p>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="portrait-frame">
+                    <img
+                        class="portrait"
+                        src="/images/profile.jpg"
+                        alt="Portrait of Gabriel Emeka wearing a burgundy jacket and black beanie"
+                        fetchpriority="high"
+                    >
+                    <span class="portrait-index" aria-hidden="true">01 / 04</span>
+                </div>
+                <div class="portrait-caption">
+                    <span class="caption-dot" aria-hidden="true"></span>
+                    <span>Learning by building</span>
+                </div>
+                <span class="visual-coordinate" aria-hidden="true">GE — 2026</span>
+            </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="section">
+        <!-- Existing content is retained for the next design stage. -->
+        <section id="about" class="section page-shell">
+            <p class="section-kicker">01 / About</p>
             <h2>About Me</h2>
-
             <p>
                 I'm currently studying Informatics Engineering at
                 Nusa Putra University. I'm developing my programming
@@ -58,22 +90,113 @@
             </p>
         </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="section">
-            <h2>My Skills</h2>
-
+        <section id="skills" class="section page-shell" aria-labelledby="skills-title">
+            <p class="section-kicker">02 / Toolkit</p>
+            <div class="skills-heading">
+                <h2 id="skills-title">Tools for thoughtful building.</h2>
+                <p class="skills-intro">A growing toolkit for shaping ideas into useful digital experiences.</p>
+            </div>
             <div class="skills-list">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>React</span>
-                <span>Node.js</span>
-                <span>Git & GitHub</span>
+                <article class="skill-card" aria-label="HTML, web markup">
+                    <div class="skill-card-top">
+                        <span class="skill-icon" aria-hidden="true">
+                            <svg viewBox="0 0 48 48" fill="none">
+                                <path d="M8 5h32l-3 34-13 4-13-4L8 5Z" stroke="currentColor" stroke-width="2"/>
+                                <path d="M16 14h18l-.6 6H17l.5 5h15l-1.2 10-7.3 2-7.3-2-.5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <span class="skill-number">01</span>
+                    </div>
+                    <h3>HTML</h3>
+                    <p>Structure for the web</p>
+                    <span class="skill-card-rule" aria-hidden="true"></span>
+                </article>
+
+                <article class="skill-card" aria-label="CSS, styling and layout">
+                    <div class="skill-card-top">
+                        <span class="skill-icon" aria-hidden="true">
+                            <svg viewBox="0 0 48 48" fill="none">
+                                <path d="M8 5h32l-3 34-13 4-13-4L8 5Z" stroke="currentColor" stroke-width="2"/>
+                                <path d="M16 14h18l-.6 6H21l.4 4h12l-1 11-8.3 2-7.4-2-.5-5h6l.1 1 1.9.5 2.1-.5.3-2h-12l-1.2-9h12.5l.3-1H16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <span class="skill-number">02</span>
+                    </div>
+                    <h3>CSS</h3>
+                    <p>Styling &amp; layout</p>
+                    <span class="skill-card-rule" aria-hidden="true"></span>
+                </article>
+
+                <article class="skill-card" aria-label="JavaScript, interactive experiences">
+                    <div class="skill-card-top">
+                        <span class="skill-icon skill-icon-js" aria-hidden="true">
+                            <svg viewBox="0 0 48 48" fill="none">
+                                <rect x="7" y="7" width="34" height="34" rx="3" stroke="currentColor" stroke-width="2"/>
+                                <path d="M27 29v4c0 3-1.5 4-4 4-1.8 0-3-.7-4-1.8M34 30c-.8-.8-1.7-1.2-3-1.2-1.5 0-2.5.8-2.5 2s1 1.8 2.8 2.4c2.1.7 3.2 1.7 3.2 3.5 0 2.2-1.7 3.5-4.3 3.5-1.8 0-3.3-.6-4.3-1.6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <span class="skill-number">03</span>
+                    </div>
+                    <h3>JavaScript</h3>
+                    <p>Interactive experiences</p>
+                    <span class="skill-card-rule" aria-hidden="true"></span>
+                </article>
+
+                <article class="skill-card" aria-label="React, component-based interfaces">
+                    <div class="skill-card-top">
+                        <span class="skill-icon" aria-hidden="true">
+                            <svg viewBox="0 0 48 48" fill="none">
+                                <ellipse cx="24" cy="24" rx="20" ry="8" stroke="currentColor" stroke-width="1.8"/>
+                                <ellipse cx="24" cy="24" rx="20" ry="8" transform="rotate(60 24 24)" stroke="currentColor" stroke-width="1.8"/>
+                                <ellipse cx="24" cy="24" rx="20" ry="8" transform="rotate(120 24 24)" stroke="currentColor" stroke-width="1.8"/>
+                                <circle cx="24" cy="24" r="3" fill="currentColor"/>
+                            </svg>
+                        </span>
+                        <span class="skill-number">04</span>
+                    </div>
+                    <h3>React</h3>
+                    <p>Component-based interfaces</p>
+                    <span class="skill-card-rule" aria-hidden="true"></span>
+                </article>
+
+                <article class="skill-card" aria-label="Node.js, server-side JavaScript">
+                    <div class="skill-card-top">
+                        <span class="skill-icon skill-icon-node" aria-hidden="true">
+                            <svg viewBox="0 0 48 48" fill="none">
+                                <path d="m24 4 17 10v20L24 44 7 34V14L24 4Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                                <path d="M17 29v-8l7 8v-8M29 29v-8h5M29 25h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <span class="skill-number">05</span>
+                    </div>
+                    <h3>Node.js</h3>
+                    <p>Server-side JavaScript</p>
+                    <span class="skill-card-rule" aria-hidden="true"></span>
+                </article>
+
+                <article class="skill-card" aria-label="Git and GitHub, version control and collaboration">
+                    <div class="skill-card-top">
+                        <span class="skill-icon" aria-hidden="true">
+                            <svg viewBox="0 0 48 48" fill="none">
+                                <path d="m24 5 19 19-19 19L5 24 24 5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                                <path d="M19 18v12M19 23h10a4 4 0 0 0 4-4v-2M19 27h10a4 4 0 0 1 4 4v2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                                <circle cx="19" cy="16" r="2" fill="currentColor"/>
+                                <circle cx="19" cy="32" r="2" fill="currentColor"/>
+                                <circle cx="33" cy="16" r="2" fill="currentColor"/>
+                                <circle cx="33" cy="34" r="2" fill="currentColor"/>
+                            </svg>
+                        </span>
+                        <span class="skill-number">06</span>
+                    </div>
+                    <h3>Git &amp; GitHub</h3>
+                    <p>Version control &amp; collaboration</p>
+                    <span class="skill-card-rule" aria-hidden="true"></span>
+                </article>
             </div>
         </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="section">
+        <section id="projects" class="section page-shell">
+            <p class="section-kicker">03 / Selected work</p>
             <h2>Featured Projects</h2>
 
             <div class="project-card">
@@ -101,25 +224,21 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="section">
+        <section id="contact" class="section page-shell">
+            <p class="section-kicker">04 / Contact</p>
             <h2>Get In Touch</h2>
-
             <p>
                 Interested in connecting or discussing technology?
                 Feel free to reach out.
             </p>
-
-            <a href="mailto:your-email@example.com">
-                Send Me an Email
+            <a class="button button-primary contact-button" href="mailto:your-email@example.com">
+                Send Me an Email <span aria-hidden="true">↗</span>
             </a>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Gabriel Emeka. All rights reserved.</p>
+    <footer class="site-footer">
+        <p>Designed &amp; built by Gabriel Emeka <span aria-hidden="true">·</span> 2026</p>
     </footer>
-
 </body>
 </html>
